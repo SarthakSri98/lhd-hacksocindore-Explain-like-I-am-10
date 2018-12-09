@@ -39,14 +39,14 @@
    margin-right: 60px;
    margin-top: -23px;
 }
-card:hover{
+.card:hover{
     cursor: pointer !important;
 }
 .container{
     position: relative;
     top:90px;
-    margin: 48px;
-    margin-left: 219px;
+    margin-top: 48px;
+    /* margin-left: 219px; */
 }
 
 .description{
@@ -58,7 +58,8 @@ card:hover{
     bottom: 28px;
     position: relative;
     float: right;
-    margin-right: 71px
+    margin-right: 71px;
+    outline:none;
 }
 
 .formButtons{

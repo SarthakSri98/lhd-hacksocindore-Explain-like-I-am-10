@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Lilita+One');
+
+
 .form-control{
     width:300px;
 }
@@ -5,14 +8,17 @@
 .loginForm{
 
     position: relative;
-    top: 282px;
+    top: 203px;
     left: 34%;
-    background-color: rgb(154, 161, 224);
+background-image: url(https://cdn.shopify.com/s/files/1/1999/7417/products/19506_a3d21691-f2b4-496f-ad0c-beae8f251b48_800x.jpg?v=1535456298);
     padding-left: 163px;
     padding-right: 200px;
-padding-top:40px;
-    width:600px;
-    height:450px;
+    padding-top: 40px;
+    width: 600px;
+    height: 586px;
+    box-shadow: 3px 3px 5px rgb(65, 41, 41);
+    font-family: 'Lilita One', cursive;
+
 }
 
 h2{
@@ -20,4 +26,10 @@ h2{
     text-align: center;
     position: relative;
     left: 31px;
+}
+.btn{ 
+       top: 45px;
+    position: relative;
+    left: 91px;
+    background-color: rgb(252, 250, 250);
 }

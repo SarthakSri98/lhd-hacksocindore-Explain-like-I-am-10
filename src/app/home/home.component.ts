@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
   description;
   height = '500px';
   width= '600px';
+  height1 = '600px';
   constructor(private modalService: MatDialog ) { }
 
   ngOnInit() {
@@ -58,7 +59,7 @@ export class HomeComponent implements OnInit {
 
     const dialogConfig = new MatDialogConfig();
     this.modalService.open(content,{
-      height: this.height,
+      height: this.height1,
       width: this.width,
       panelClass: 'custom-modalbox'
     });
@@ -71,6 +72,7 @@ export class HomeComponent implements OnInit {
 
   addForm = new FormGroup({
     title :new FormControl(),
+    tags : new FormControl(),
     description :new FormControl()
   })
   

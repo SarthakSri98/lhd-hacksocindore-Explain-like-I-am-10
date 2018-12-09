@@ -12,8 +12,8 @@ import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { LoginComponent } from './login/login.component';
 
 const route : Routes = [
+  { path:'', component:LoginComponent },
   { path:'home', component:HomeComponent },
-  { path:'login', component:LoginComponent }
   
 ]
 
@@ -25,7 +25,7 @@ const route : Routes = [
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,MatToolbarModule,MatInputModule,MatDialogModule,MatButtonModule,ReactiveFormsModule,FormsModule
+    BrowserAnimationsModule,MatToolbarModule,MatInputModule,MatDialogModule,MatButtonModule,ReactiveFormsModule,FormsModule,RouterModule.forRoot(route)
   ],
   providers: [],
   bootstrap: [AppComponent]

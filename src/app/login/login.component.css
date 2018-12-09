@@ -1,0 +1,23 @@
+.form-control{
+    width:300px;
+}
+
+.loginForm{
+
+    position: relative;
+    top: 282px;
+    left: 34%;
+    background-color: rgb(154, 161, 224);
+    padding-left: 163px;
+    padding-right: 200px;
+padding-top:40px;
+    width:600px;
+    height:450px;
+}
+
+h2{
+    margin-bottom: 42px;
+    text-align: center;
+    position: relative;
+    left: 31px;
+}

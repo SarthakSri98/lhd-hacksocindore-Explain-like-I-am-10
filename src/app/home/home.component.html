@@ -3,7 +3,7 @@
     <input matInput placeholder="Search">
   </mat-form-field>
 </form>
-<button mat-fab color="accent" class="openForm" mat-raised-button (click)="addNew(openForm)">Warn</button>
+<button mat-fab color="accent" class="openForm" mat-raised-button (click)="addNew(openForm)"><i class="fa fa-plus"></i></button>
 
 
 <div class="container" [@fadeIn]="topicArray.length">
@@ -31,7 +31,7 @@
       <mat-toolbar>
           <span class="title center2">Add new Term</span>
     </mat-toolbar><br><br>
-      <form class="example-form" [formGroup]="addForm" (ngSubmit)="add()" >
+      <form class="example-form center3" [formGroup]="addForm" (ngSubmit)="add()" >
           <mat-form-field class="example-full-width">
             <input matInput placeholder="Title" formControlName="title">
           </mat-form-field>

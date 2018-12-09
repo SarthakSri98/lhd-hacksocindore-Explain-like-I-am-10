@@ -9,15 +9,19 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { LoginComponent } from './login/login.component';
 
 const route : Routes = [
-  { path:'home', component:HomeComponent }
+  { path:'home', component:HomeComponent },
+  { path:'login', component:LoginComponent }
+  
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

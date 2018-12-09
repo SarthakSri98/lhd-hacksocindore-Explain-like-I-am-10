@@ -23,6 +23,12 @@
     left: 38%;
     top:50px;
 }
+.center3{
+    text-align: center;
+    position: relative;
+    left: 4%;
+    top: -15px;
+}
 .card{
    height: 350px;
    width:400px;
@@ -49,9 +55,10 @@ card:hover{
 }
 
 .openForm{
-    float:right;
-    margin-right: 100px;
-    margin-bottom: 20px;
+    bottom: 28px;
+    position: relative;
+    float: right;
+    margin-right: 71px
 }
 
 .formButtons{

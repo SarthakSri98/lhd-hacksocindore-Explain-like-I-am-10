@@ -11,7 +11,7 @@
     <mat-toolbar color="accent">
             <span class="title center">{{ i+1 }} - {{ topic.title }}</span>
       </mat-toolbar>
-  <div class="description"><span>{{ topic.description }}</span></div>
+  <div class="description"><span>{{ topic.description.substr(0,140) }} <p *ngIf="topic.description.length>140" style="color:red"> ... Read more </p> </span></div>
 </div>
 </div>
 

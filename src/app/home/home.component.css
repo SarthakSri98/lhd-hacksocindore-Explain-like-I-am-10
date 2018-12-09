@@ -28,7 +28,7 @@
    width:400px;
    float:left;
    margin-left:70px;
-   margin-bottom: 40px;
+   margin-bottom: 60px;
    box-shadow: 3px 3px 8px rgb(68, 59, 59);
    margin-right: 60px;
    margin-top: -23px;
@@ -38,9 +38,9 @@ card:hover{
 }
 .container{
     position: relative;
-    top:50px;
+    top:90px;
     margin: 48px;
-    margin-left: 281px;
+    margin-left: 219px;
 }
 
 .description{

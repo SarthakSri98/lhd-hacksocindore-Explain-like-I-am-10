@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog,MatDialogConfig,MAT_DIALOG_DATA,MatTooltip } from '@angular/material/';
 import { transition,trigger,style,animate,state,stagger,query, keyframes } from '@angular/animations';
-
+import { FormControl,FormGroup,FormControlName } from '@angular/forms'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -69,5 +69,14 @@ export class HomeComponent implements OnInit {
       this.modalService.closeAll();
   }
 
+  addForm = new FormGroup({
+    title :new FormControl(),
+    description :new FormControl()
+  })
   
+  add()
+  {
+    this.topicArray.push(this.addForm.value);
+    this.Cross_click();
+  }
 }

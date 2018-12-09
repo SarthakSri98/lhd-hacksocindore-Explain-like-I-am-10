@@ -3,10 +3,11 @@
     <input matInput placeholder="Search">
   </mat-form-field>
 </form>
-<a class="openForm" mat-raised-button (click)="addNew(openForm)">Link</a>
+<button mat-fab color="accent" class="openForm" mat-raised-button (click)="addNew(openForm)">Warn</button>
+
 
 <div class="container" [@fadeIn]="topicArray.length">
-<div class="card" *ngFor="let topic of topicArray;let i = index" (click)="open(openModal,i)" >
+<div class="card" *ngFor="let topic of topicArray.reverse();let i = index" (click)="open(openModal,i)" >
     <mat-toolbar color="accent">
             <span class="title center">{{ i+1 }} - {{ topic.title }}</span>
       </mat-toolbar>
@@ -30,16 +31,17 @@
       <mat-toolbar>
           <span class="title center2">Add new Term</span>
     </mat-toolbar><br><br>
-      <form class="example-form">
+      <form class="example-form" [formGroup]="addForm" (ngSubmit)="add()" >
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Title">
+            <input matInput placeholder="Title" formControlName="title">
           </mat-form-field>
         
           <mat-form-field class="example-full-width">
-            <textarea matInput placeholder="Description" rows="4"></textarea>
+            <textarea matInput placeholder="Description" rows="4" formControlName="description"></textarea>
           </mat-form-field>
+          <a class="formButtons" mat-raised-button (click)="Cross_click()">Cancel</a>
+        <button class="formButtons" type="submit"  mat-raised-button>Add</button>
         </form>
-        <a class="formButtons" mat-raised-button (click)="Cross_click()">Cancel</a>
-        <a class="formButtons" mat-raised-button (click)="add()">Add</a>
+        
 
     </ng-template>

@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lilita+One');
-
+h1{
+    font-family: 'Lilita One', cursive;
+text-align: center;
+margin-top:30px;
+font-size: 45px;
+}
 
 .form-control{
     width:300px;
@@ -8,8 +13,8 @@
 .loginForm{
 
     position: relative;
-    top: 203px;
-    left: 34%;
+    top: 143px;
+    left: 35%;
 background-image: url(https://cdn.shopify.com/s/files/1/1999/7417/products/19506_a3d21691-f2b4-496f-ad0c-beae8f251b48_800x.jpg?v=1535456298);
     padding-left: 163px;
     padding-right: 200px;

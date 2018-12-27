@@ -68,3 +68,11 @@
     margin-left: 22px;
     font-size: 20px;
 }
+
+.delete{
+    position: absolute;
+    left: calc(100% - 28px);
+    top: -27px;
+    outline: none;
+    z-index: 1000;
+}

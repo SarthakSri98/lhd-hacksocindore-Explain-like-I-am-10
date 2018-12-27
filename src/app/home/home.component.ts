@@ -81,4 +81,12 @@ i;
     this.topicArray.push(this.addForm.value);
     this.Cross_click();
   }
+
+   delete(index)
+   {
+     this.topicArray.splice(index,1);
+     console.log('deleted',index);
+   }
+
 }
+

@@ -10,6 +10,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const route : Routes = [
   { path:'', component:LoginComponent },
@@ -25,7 +26,8 @@ const route : Routes = [
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,MatToolbarModule,MatInputModule,MatDialogModule,MatButtonModule,ReactiveFormsModule,FormsModule,RouterModule.forRoot(route)
+    BrowserAnimationsModule,MatToolbarModule,MatInputModule,MatDialogModule,MatButtonModule,ReactiveFormsModule,FormsModule,RouterModule.forRoot(route),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

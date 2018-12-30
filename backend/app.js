@@ -2,10 +2,16 @@ var express = require('express');
 var path  = require('path');
 var app = express();
 var mongoose = require('mongoose');
+//body-parser middleware
 var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+var topicRouter = require('./routes/topic');
+var indexRouter = require('./routes/index');
 
 //mognodb connection with mlab
-var url = 'mongodb://Sarthak:Sarthak98@ds143953.mlab.com:43953/explain-like-i-am-10';
+var url = 'mongodb://Sarthak:Sarthak98@ds039095.mlab.com:39095/explain-like-i-am-ten';
 //var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/users');
 //var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" area of site
@@ -16,6 +22,9 @@ mongoose.connect(url,{ useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', function() {
+    console.log("database has been connected");
+  });
 
 //bodyParser middlewares
 app.use(bodyParser.json());
@@ -28,8 +37,8 @@ app.use((req,res,next)=>{
      next();
 });
 
-//app.use('/', indexRouter);
-//app.use('/users', usersRouter);
+app.use('/', indexRouter);
+app.use('/home', topicRouter);
 //app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 
 app.use((req,res,next)=>{

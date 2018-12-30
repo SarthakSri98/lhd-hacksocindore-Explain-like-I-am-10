@@ -34,13 +34,13 @@
     </mat-toolbar><br><br>
       <form class="example-form center3" [formGroup]="addForm" (ngSubmit)="add()" >
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Title" formControlName="title">
+            <input matInput placeholder="Title" formControlName="title" required>
           </mat-form-field>
           <mat-form-field class="example-full-width">
               <input matInput placeholder="Tags" formControlName="tags">
             </mat-form-field>
           <mat-form-field class="example-full-width">
-            <textarea matInput placeholder="Description" rows="4" formControlName="description"></textarea>
+            <textarea matInput placeholder="Description" rows="4" formControlName="description" required></textarea>
           </mat-form-field>
           <a class="formButtons" mat-raised-button (click)="Cross_click()">Cancel</a>
         <button class="formButtons" type="submit"  mat-raised-button>Add</button>

@@ -10,12 +10,12 @@ export class TopicServiceService {
 
   getTopics()
   {
-     return this.http.get<{ error:string , data:{}  }>('http://localhost:8000/home');
+     return this.http.get<{ error:string , data:{}  }>('http://localhost:8000/home/list');
   }
 
   postTopic(data)
   {
-    return this.http.post<{ message:string , data:{} }>('http://localhost:8000/home',data,
+    return this.http.post<{ message:string , data:{} }>('http://localhost:8000/home/newTopic',data,
   //   {
   //     headers: new HttpHeaders().set('Content-Type', 'application/json'),
   //     responseType: 'json' 

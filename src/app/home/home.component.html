@@ -7,7 +7,7 @@
 
 
 <div class="container" [@fadeIn]="topicArray.length">
-<div class="card" *ngFor="let topic of topicArray.reverse();let i = index" (click)="open(openModal,i)" >
+<div class="card" *ngFor="let topic of topicArray;let i = index" (click)="open(openModal,i)" >
     <button mat-fab color="accent" class="delete" mat-raised-button (click)="delete(topicArray.length-i-1)"><i class="fa fa-times"></i></button>
     <mat-toolbar color="accent">
             <span class="title center">{{ i+1 }} - {{ topic.title }}</span>
@@ -42,7 +42,7 @@
           <mat-form-field class="example-full-width">
             <textarea matInput placeholder="Description" rows="4" formControlName="description" required></textarea>
           </mat-form-field>
-          <a class="formButtons" mat-raised-button (click)="Cross_click()">Cancel</a>
+          <button class="formButtons" mat-raised-button (click)="Cross_click()">Cancel</button>
         <button class="formButtons" type="submit"  mat-raised-button>Add</button>
         </form>
         

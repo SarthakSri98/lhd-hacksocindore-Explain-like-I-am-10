@@ -39,7 +39,9 @@ exports.editTopic = function(req,res)
 
 }
 
-exports.deleteTopic = function(res,res)
+exports.deleteTopic = function(req,res)
 {
+   const id = req.params.id;
+   
 
 }

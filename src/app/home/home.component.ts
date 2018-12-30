@@ -100,6 +100,9 @@ i:number;
 
    delete(index)
    {
+     this._topicService.deleteTopic(this.topicArray[index]._id).subscribe(result=>{
+       console.log(result);
+     })
      this.topicArray.splice(index,1);
      console.log('deleted',index);
    }

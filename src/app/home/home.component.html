@@ -8,7 +8,7 @@
 
 <div class="container" [@fadeIn]="topicArray.length">
 <div class="card" *ngFor="let topic of topicArray;let i = index" (click)="open(openModal,i)" >
-    <button mat-fab color="accent" class="delete" mat-raised-button (click)="delete(topicArray.length-i-1)"><i class="fa fa-times"></i></button>
+    <button mat-fab color="accent" class="delete" mat-raised-button (click)="delete(i)"><i class="fa fa-times"></i></button>
     <mat-toolbar color="accent">
             <span class="title center">{{ i+1 }} - {{ topic.title }}</span>
       </mat-toolbar>

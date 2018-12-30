@@ -7,8 +7,8 @@ router.get('/list',topic_controller.getTopics);
 
 router.post('/newTopic',topic_controller.postTopic);
 
-router.post('/:id/edit',topic_controller.editTopic);
+router.put('/edit/:id',topic_controller.editTopic);
 
-router.post('/:id/delete',topic_controller.deleteTopic);
+router.delete('/delete/:id',topic_controller.deleteTopic);
 
 module.exports = router;

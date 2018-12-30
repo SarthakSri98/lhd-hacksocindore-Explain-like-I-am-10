@@ -22,4 +22,9 @@ export class TopicServiceService {
   //  }
    );
   }
+
+  deleteTopic(id)
+  {
+    return this.http.delete('http://localhost:8000/home/delete/'+id);
+  }
 }

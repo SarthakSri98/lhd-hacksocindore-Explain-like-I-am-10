@@ -42,6 +42,13 @@ exports.editTopic = function(req,res)
 exports.deleteTopic = function(req,res)
 {
    const id = req.params.id;
-   
+   topic.deleteOne({_id:req.params.id}).then(result=>{
+       console.log(result);
+   });
+   res.status(200).json({
+       message:"Topic deleted Succesfully"
+   }).catch((err)=>{
+       message:"There was some error"
+   })
 
 }
